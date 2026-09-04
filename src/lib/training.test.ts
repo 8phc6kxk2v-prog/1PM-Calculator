@@ -1,3 +1,7 @@
+/*
+ * 1PM Calculator
+ * MIT License, Copyright (c) 2026 Ivan Gladyshev
+ */
 import { describe, expect, it } from 'vitest'
 import { dotsCoefficient, dotsLevel, dotsScore } from './dots'
 import { personalRecords, powerliftingTotal, progressDelta } from './records'

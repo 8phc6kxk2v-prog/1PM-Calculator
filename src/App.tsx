@@ -1,4 +1,8 @@
-﻿import { useState } from 'react'
+/*
+ * 1PM Calculator
+ * MIT License, Copyright (c) 2026 Ivan Gladyshev
+ */
+import { useState } from 'react'
 import BottomNav, { type Tab } from './components/BottomNav'
 import { getProfile } from './lib/storage'
 import BreathScreen from './screens/BreathScreen'

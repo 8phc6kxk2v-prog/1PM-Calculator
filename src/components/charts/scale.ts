@@ -1,3 +1,7 @@
+/*
+ * 1PM Calculator
+ * MIT License, Copyright (c) 2026 Ivan Gladyshev
+ */
 export function scaleLinear(domain: [number, number], range: [number, number]) {
   const [d0, d1] = domain
   const [r0, r1] = range

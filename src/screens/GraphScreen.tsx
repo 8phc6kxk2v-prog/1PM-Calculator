@@ -1,4 +1,8 @@
-﻿import { ArrowUpRight, DownloadSimple, TrashSimple, UploadSimple } from '@phosphor-icons/react'
+/*
+ * 1PM Calculator
+ * MIT License, Copyright (c) 2026 Ivan Gladyshev
+ */
+import { ArrowUpRight, DownloadSimple, TrashSimple, UploadSimple } from '@phosphor-icons/react'
 import { useRef, useState, type ChangeEvent } from 'react'
 import CurveChart from '../components/charts/CurveChart'
 import ProgressChart from '../components/charts/ProgressChart'

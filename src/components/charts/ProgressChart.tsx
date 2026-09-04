@@ -1,3 +1,7 @@
+/*
+ * 1PM Calculator
+ * MIT License, Copyright (c) 2026 Ivan Gladyshev
+ */
 import { accuracyHint } from '../../lib/formulas'
 import { estimate1RM } from '../../lib/records'
 import type { HistoryEntry } from '../../lib/storage'

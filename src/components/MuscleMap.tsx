@@ -1,3 +1,7 @@
+/*
+ * 1PM Calculator
+ * MIT License, Copyright (c) 2026 Ivan Gladyshev
+ */
 import { useState } from 'react'
 import { MUSCLE_LABELS, type MuscleGroup } from '../data/muscleMap'
 import { BODY_PARTS, BODY_VIEWBOX, VIEW_PATHS, type BodyView } from './BodySilhouette'

@@ -1,3 +1,7 @@
+/*
+ * 1PM Calculator
+ * MIT License, Copyright (c) 2026 Ivan Gladyshev
+ */
 import ProfileForm from '../components/ProfileForm'
 import { saveProfile, type Profile } from '../lib/storage'
 import styles from './OnboardingScreen.module.css'

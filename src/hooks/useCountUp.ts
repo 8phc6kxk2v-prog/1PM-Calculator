@@ -1,3 +1,7 @@
+/*
+ * 1PM Calculator
+ * MIT License, Copyright (c) 2026 Ivan Gladyshev
+ */
 import { useEffect, useState } from 'react'
 
 const DURATION_MS = 400

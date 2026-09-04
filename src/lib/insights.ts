@@ -1,4 +1,8 @@
-﻿import { personalRecords } from './records'
+/*
+ * 1PM Calculator
+ * MIT License, Copyright (c) 2026 Ivan Gladyshev
+ */
+import { personalRecords } from './records'
 import type { HistoryEntry } from './storage'
 
 const DAY_MS = 24 * 60 * 60 * 1000

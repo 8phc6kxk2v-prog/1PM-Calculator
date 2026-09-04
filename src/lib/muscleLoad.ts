@@ -1,4 +1,8 @@
-﻿import {
+/*
+ * 1PM Calculator
+ * MIT License, Copyright (c) 2026 Ivan Gladyshev
+ */
+import {
   MUSCLE_GROUPS,
   MUSCLE_LABELS,
   resolveExercise,

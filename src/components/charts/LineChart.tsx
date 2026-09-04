@@ -1,3 +1,7 @@
+/*
+ * 1PM Calculator
+ * MIT License, Copyright (c) 2026 Ivan Gladyshev
+ */
 import { useId, useState } from 'react'
 import styles from './Chart.module.css'
 import { paddedDomain, scaleLinear, toPoints } from './scale'

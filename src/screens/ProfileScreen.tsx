@@ -1,3 +1,7 @@
+/*
+ * 1PM Calculator
+ * MIT License, Copyright (c) 2026 Ivan Gladyshev
+ */
 import { ArrowLeft, Trash } from '@phosphor-icons/react'
 import { useState } from 'react'
 import ProfileForm from '../components/ProfileForm'

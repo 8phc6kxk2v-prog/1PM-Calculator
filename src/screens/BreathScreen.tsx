@@ -1,3 +1,7 @@
+/*
+ * 1PM Calculator
+ * MIT License, Copyright (c) 2026 Ivan Gladyshev
+ */
 import { Play, Stop } from '@phosphor-icons/react'
 import { useEffect, useRef, useState } from 'react'
 import {

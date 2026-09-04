@@ -1,3 +1,7 @@
+/*
+ * 1PM Calculator
+ * MIT License, Copyright (c) 2026 Ivan Gladyshev
+ */
 import { MUSCLE_LABELS, resolveExercise, type MuscleGroup } from '../data/muscleMap'
 import styles from './ExerciseMuscles.module.css'
 import MuscleMap, { fillFor } from './MuscleMap'

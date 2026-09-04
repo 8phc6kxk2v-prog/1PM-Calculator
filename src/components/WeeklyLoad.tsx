@@ -1,4 +1,8 @@
-﻿import { useMemo, useState } from 'react'
+/*
+ * 1PM Calculator
+ * MIT License, Copyright (c) 2026 Ivan Gladyshev
+ */
+import { useMemo, useState } from 'react'
 import { MUSCLE_LABELS, type MuscleGroup } from '../data/muscleMap'
 import { computeMuscleLoads, muscleInsight, type LoadSet } from '../lib/muscleLoad'
 import { plural } from '../lib/plural'

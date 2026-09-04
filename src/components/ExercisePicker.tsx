@@ -1,3 +1,7 @@
+/*
+ * 1PM Calculator
+ * MIT License, Copyright (c) 2026 Ivan Gladyshev
+ */
 import { Check, MagnifyingGlass, Plus, X } from '@phosphor-icons/react'
 import { useEffect, useRef, useState } from 'react'
 import { EXERCISE_GROUPS } from '../lib/storage'

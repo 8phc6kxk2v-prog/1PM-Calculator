@@ -1,3 +1,7 @@
+/*
+ * 1PM Calculator
+ * MIT License, Copyright (c) 2026 Ivan Gladyshev
+ */
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 

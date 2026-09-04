@@ -1,3 +1,5 @@
+﻿# 1PM Calculator
+# MIT License, Copyright (c) 2026 Ivan Gladyshev
 # Публикация приложения на GitHub с автоматическим деплоем на GitHub Pages.
 # Запуск из папки проекта:  powershell -ExecutionPolicy Bypass -File setup-github.ps1
 #

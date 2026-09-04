@@ -122,6 +122,10 @@ from the exercise picker — they are saved and appear in the list next time.
 The muscle map recognises about 70 exercise names, including common synonyms and typos. If something
 you logged is not recognised, the progress tab lists it so it isn't silently ignored.
 
+## License
+
+[MIT](LICENSE) © 2026 Ivan Gladyshev
+
 ## Credits
 
 Body silhouette geometry from

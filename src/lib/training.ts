@@ -1,3 +1,7 @@
+/*
+ * 1PM Calculator
+ * MIT License, Copyright (c) 2026 Ivan Gladyshev
+ */
 /**
  * Прикладные расчёты вокруг 1ПМ: рабочие веса, разминка, блины на штангу.
  *

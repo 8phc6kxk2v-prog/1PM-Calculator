@@ -1,4 +1,8 @@
-﻿.wrap {
+/*
+ * 1PM Calculator
+ * MIT License, Copyright (c) 2026 Ivan Gladyshev
+ */
+.wrap {
   position: fixed;
   inset-inline: 0;
   bottom: 0;

@@ -1,4 +1,8 @@
-﻿import { BALANCE_REFERENCE, dayKey, liftBalance, streakStats } from '../lib/insights'
+/*
+ * 1PM Calculator
+ * MIT License, Copyright (c) 2026 Ivan Gladyshev
+ */
+import { BALANCE_REFERENCE, dayKey, liftBalance, streakStats } from '../lib/insights'
 import { plural } from '../lib/plural'
 import type { HistoryEntry } from '../lib/storage'
 import styles from './InsightCards.module.css'

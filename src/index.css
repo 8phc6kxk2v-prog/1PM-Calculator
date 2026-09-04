@@ -1,4 +1,8 @@
-﻿:root {
+/*
+ * 1PM Calculator
+ * MIT License, Copyright (c) 2026 Ivan Gladyshev
+ */
+:root {
   /* Палитра */
   --color-bg: #121316;
   --color-bg-deep: #0e0f12;

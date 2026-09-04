@@ -1,4 +1,8 @@
-﻿import { describe, expect, it } from 'vitest'
+/*
+ * 1PM Calculator
+ * MIT License, Copyright (c) 2026 Ivan Gladyshev
+ */
+import { describe, expect, it } from 'vitest'
 import { liftBalance, streakStats } from './insights'
 import type { HistoryEntry } from './storage'
 

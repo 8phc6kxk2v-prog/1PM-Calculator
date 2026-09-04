@@ -1,3 +1,7 @@
+/*
+ * 1PM Calculator
+ * MIT License, Copyright (c) 2026 Ivan Gladyshev
+ */
 import { Camera } from '@phosphor-icons/react'
 import { useRef, useState, type ChangeEvent, type FormEvent } from 'react'
 import { fileToAvatar, initials } from '../lib/avatar'

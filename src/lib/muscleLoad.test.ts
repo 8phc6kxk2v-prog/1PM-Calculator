@@ -1,3 +1,7 @@
+/*
+ * 1PM Calculator
+ * MIT License, Copyright (c) 2026 Ivan Gladyshev
+ */
 import { describe, expect, it } from 'vitest'
 import { EXERCISES, MUSCLE_GROUPS, normalize, resolveExercise } from '../data/muscleMap'
 import { computeMuscleLoads, muscleInsight, type LoadSet } from './muscleLoad'

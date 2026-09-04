@@ -1,3 +1,7 @@
+/*
+ * 1PM Calculator
+ * MIT License, Copyright (c) 2026 Ivan Gladyshev
+ */
 import { calculateBrzycki, calculateEpley } from '../../lib/formulas'
 import styles from './Chart.module.css'
 import LineChart, { type ChartPoint } from './LineChart'

@@ -1,3 +1,7 @@
+/*
+ * 1PM Calculator
+ * MIT License, Copyright (c) 2026 Ivan Gladyshev
+ */
 /* Нативный dialog: backdrop, Esc и перехват фокуса достаются бесплатно */
 .sheet {
   position: fixed;
