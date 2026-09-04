@@ -35,7 +35,11 @@ jobs:
         env:
           BASE_PATH: /${{ github.event.repository.name }}/
 
+      # enablement включает Pages сам, если он ещё не включён в настройках:
+      # без этого шаг падает на свежем репозитории
       - uses: actions/configure-pages@v5
+        with:
+          enablement: true
 
       - uses: actions/upload-pages-artifact@v3
         with:
