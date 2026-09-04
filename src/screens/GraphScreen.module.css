@@ -1,0 +1,256 @@
+.header {
+  margin-bottom: 18px;
+}
+
+.switch {
+  margin-bottom: 18px;
+}
+
+.control {
+  margin-bottom: 16px;
+}
+
+.chartCard {
+  padding: 16px 14px 14px;
+  background: var(--color-surface);
+  border: 1px solid var(--color-line);
+  border-radius: var(--radius);
+}
+
+.sectionTitle {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+  margin: 30px 0 12px;
+}
+
+.count {
+  color: var(--color-text-muted);
+  font-size: 0.8125rem;
+}
+
+/* Рекорды */
+
+.records {
+  display: grid;
+  gap: 8px;
+}
+
+.record {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  gap: 12px;
+  padding: 13px 15px;
+  background: var(--color-surface);
+  border: 1px solid var(--color-line);
+  border-radius: var(--radius-sm);
+}
+
+.recordName {
+  font-size: 0.875rem;
+  font-weight: 600;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.recordMeta {
+  margin-top: 2px;
+  color: var(--color-text-muted);
+  font-size: 0.75rem;
+  font-variant-numeric: tabular-nums;
+}
+
+.recordValue {
+  display: flex;
+  align-items: baseline;
+  gap: 4px;
+  font-size: 1.375rem;
+  color: var(--color-accent);
+}
+
+.recordValue small {
+  font-family: var(--font-sans);
+  font-size: 0.6875rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+}
+
+.delta {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  margin-left: 8px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+}
+
+.deltaUp {
+  color: var(--color-accent);
+}
+
+.deltaDown {
+  color: var(--color-text-muted);
+}
+
+/* DOTS */
+
+.dots {
+  display: grid;
+  gap: 14px;
+  padding: 18px;
+  background: linear-gradient(
+    160deg,
+    color-mix(in srgb, var(--color-accent) 9%, var(--color-surface)),
+    var(--color-surface) 62%
+  );
+  border: 1px solid color-mix(in srgb, var(--color-accent) 24%, var(--color-line));
+  border-radius: var(--radius);
+}
+
+.dotsTop {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 14px;
+}
+
+.dotsScore {
+  font-size: 2.75rem;
+  line-height: 0.9;
+  color: var(--color-accent);
+}
+
+.dotsLevel {
+  padding-bottom: 4px;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: var(--color-text);
+  text-align: right;
+}
+
+.dotsLifts {
+  display: grid;
+  gap: 6px;
+  padding-top: 12px;
+  border-top: 1px solid var(--color-line);
+}
+
+.dotsLift {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  font-size: 0.8125rem;
+  color: var(--color-text-muted);
+}
+
+.dotsLift b {
+  color: var(--color-text);
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+}
+
+.dotsHint {
+  color: var(--color-text-muted);
+  font-size: 0.8125rem;
+  line-height: 1.5;
+}
+
+.source {
+  margin-top: 10px;
+  color: #63636b;
+  font-size: 0.6875rem;
+  line-height: 1.5;
+}
+
+/* История */
+
+.list {
+  display: grid;
+  gap: 8px;
+  list-style: none;
+  padding: 0;
+}
+
+.entry {
+  display: grid;
+  grid-template-columns: 1fr auto auto;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 8px 12px 15px;
+  background: var(--color-surface);
+  border: 1px solid var(--color-line);
+  border-radius: var(--radius-sm);
+}
+
+.entryName {
+  font-size: 0.875rem;
+  font-weight: 600;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.entryMeta {
+  margin-top: 2px;
+  color: var(--color-text-muted);
+  font-size: 0.75rem;
+  font-variant-numeric: tabular-nums;
+}
+
+.entryValues {
+  display: grid;
+  gap: 1px;
+  font-size: 0.8125rem;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+  text-align: right;
+}
+
+.entryEpley {
+  color: var(--color-accent);
+}
+
+.entryBrzycki {
+  color: var(--color-brzycki);
+}
+
+.delete {
+  display: grid;
+  place-items: center;
+  width: var(--tap-min);
+  height: var(--tap-min);
+  border-radius: var(--radius-sm);
+  color: #5a5a62;
+  transition: color 0.15s ease, background 0.15s ease;
+}
+
+.delete:hover,
+.delete:focus-visible {
+  color: var(--color-error);
+  background: color-mix(in srgb, var(--color-error) 10%, transparent);
+}
+
+.transfer {
+  display: flex;
+  gap: 8px;
+  margin-top: 16px;
+}
+
+.fileInput {
+  display: none;
+}
+
+.empty {
+  padding: 22px;
+  border: 1px dashed var(--color-line);
+  border-radius: var(--radius);
+  color: var(--color-text-muted);
+  font-size: 0.875rem;
+  text-align: center;
+}

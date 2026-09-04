@@ -1,0 +1,266 @@
+.header {
+  margin-bottom: 22px;
+}
+
+.fields {
+  display: grid;
+  gap: 16px;
+  margin-bottom: 18px;
+}
+
+.labelRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 7px;
+}
+
+.labelRow label {
+  margin-bottom: 0;
+}
+
+/* Своя кнопка вместо select: нативный дропдаун рисует система и он чужероден */
+.pickerButton {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  width: 100%;
+  min-height: var(--tap-min);
+  padding: 11px 14px;
+  background: var(--color-bg-deep);
+  border: 1px solid var(--color-line);
+  border-radius: var(--radius-sm);
+  color: var(--color-text);
+  font-size: 1rem;
+  font-weight: 600;
+  text-align: left;
+  transition: border-color 160ms var(--ease-out), transform 120ms var(--ease-out);
+}
+
+.pickerButton:active {
+  transform: scale(0.99);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .pickerButton:hover {
+    border-color: var(--color-surface-hi);
+  }
+}
+
+.pair {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.alert {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+  margin-bottom: 16px;
+  padding: 12px 14px;
+  border-radius: var(--radius-sm);
+  font-size: 0.8125rem;
+  line-height: 1.4;
+}
+
+.alertWarning {
+  background: color-mix(in srgb, var(--color-warning) 12%, transparent);
+  border: 1px solid color-mix(in srgb, var(--color-warning) 38%, transparent);
+  color: var(--color-warning);
+}
+
+.alertError {
+  background: color-mix(in srgb, var(--color-error) 12%, transparent);
+  border: 1px solid color-mix(in srgb, var(--color-error) 38%, transparent);
+  color: var(--color-error);
+}
+
+/* Результат: главный элемент экрана */
+
+.result {
+  margin-top: 26px;
+  padding-top: 22px;
+  border-top: 2px solid var(--color-accent);
+}
+
+.numbers {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  align-items: end;
+}
+
+.figure {
+  min-width: 0;
+}
+
+.figureLabel {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 4px;
+  font-size: 0.6875rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+}
+
+.dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 2px;
+}
+
+/* Unbounded заметно шире моноширинного: при 14vw два числа смыкались */
+.value {
+  font-size: clamp(1.75rem, 10.5vw, 2.5rem);
+  line-height: 0.95;
+}
+
+.valueEpley {
+  color: var(--color-accent);
+}
+
+.valueBrzycki {
+  color: var(--color-brzycki);
+}
+
+.unit {
+  margin-top: 6px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+}
+
+.hint {
+  margin-top: 16px;
+  color: var(--color-text-muted);
+  font-size: 0.8125rem;
+  line-height: 1.45;
+}
+
+.hint strong {
+  color: var(--color-text);
+  font-weight: 700;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 16px;
+}
+
+.autosaved {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--color-accent);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+}
+
+/* Дополнительные расчёты */
+
+.extras {
+  margin-top: 26px;
+}
+
+.extrasSwitch {
+  margin-bottom: 14px;
+}
+
+.tableRow {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 12px;
+  padding: 11px 0;
+  border-bottom: 1px solid var(--color-line-soft);
+}
+
+.tableRow:last-child {
+  border-bottom: none;
+}
+
+.reps {
+  min-width: 62px;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: var(--color-text);
+}
+
+.percent {
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: var(--color-text-muted);
+  font-variant-numeric: tabular-nums;
+}
+
+.rowWeight {
+  font-size: 1.0625rem;
+  color: var(--color-text);
+}
+
+.rowWeight span {
+  margin-left: 3px;
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: var(--color-text-muted);
+  letter-spacing: 0;
+}
+
+/* Блины */
+
+.plateBar {
+  display: flex;
+  align-items: flex-end;
+  gap: 5px;
+  min-height: 74px;
+  padding: 14px 0 4px;
+}
+
+.plate {
+  display: grid;
+  place-items: center;
+  width: 30px;
+  border-radius: 4px;
+  background: var(--color-surface-hi);
+  border: 1px solid var(--color-line);
+  color: var(--color-text);
+  font-size: 0.6875rem;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+}
+
+.plateSummary {
+  color: var(--color-text-muted);
+  font-size: 0.8125rem;
+  line-height: 1.5;
+}
+
+.plateSummary strong {
+  color: var(--color-text);
+  font-weight: 700;
+}
+
+.plateWarning {
+  margin-top: 8px;
+  color: var(--color-warning);
+  font-size: 0.8125rem;
+}
+
+.source {
+  margin-top: 14px;
+  color: #63636b;
+  font-size: 0.6875rem;
+  line-height: 1.5;
+}

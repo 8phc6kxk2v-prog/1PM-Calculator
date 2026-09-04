@@ -1,0 +1,8 @@
+node_modules
+dist
+dist-ssr
+tsconfig.tsbuildinfo
+*.local
+.claude/settings.local.json
+.DS_Store
+.vite

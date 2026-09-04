@@ -1,0 +1,170 @@
+.wrap {
+  width: 100%;
+}
+
+/* Показание выбранной точки: числа живут текстовыми токенами, не цветом серии */
+.readout {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 4px 10px;
+  margin-bottom: 10px;
+}
+
+.readoutLabel {
+  order: 2;
+  width: 100%;
+  color: var(--color-text-muted);
+  font-size: 0.6875rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.readoutValue {
+  order: 1;
+  font-size: 1.75rem;
+  line-height: 1;
+  color: var(--color-text);
+}
+
+.readoutValue small {
+  margin-left: 3px;
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--color-text-muted);
+  letter-spacing: 0;
+}
+
+.readoutDetail {
+  order: 3;
+  width: 100%;
+  color: var(--color-text-muted);
+  font-size: 0.75rem;
+  font-variant-numeric: tabular-nums;
+}
+
+.svg {
+  display: block;
+  width: 100%;
+  height: auto;
+  overflow: visible;
+  touch-action: pan-y;
+}
+
+.grid {
+  stroke: var(--color-line-soft);
+  stroke-width: 1;
+}
+
+.axisLabel {
+  fill: var(--color-text-muted);
+  font-family: var(--font-sans);
+  font-size: 9px;
+  font-weight: 600;
+}
+
+.area {
+  stroke: none;
+}
+
+.line {
+  fill: none;
+  stroke: var(--color-accent);
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.corridor {
+  fill: none;
+  stroke: var(--color-brzycki);
+  stroke-width: 1.5;
+  stroke-dasharray: 3 4;
+  stroke-linecap: round;
+  opacity: 0.75;
+}
+
+/* Кольцо подложки на точке: маркер не сливается с линией под ним */
+.dot {
+  fill: var(--color-accent);
+  stroke: var(--color-surface);
+  stroke-width: 2;
+  transition: r 140ms var(--ease-out);
+}
+
+.dot[data-active='true'] {
+  r: 6;
+}
+
+.recordRing {
+  fill: none;
+  stroke: var(--color-accent);
+  stroke-width: 1.5;
+  opacity: 0.5;
+}
+
+.hit {
+  fill: transparent;
+  cursor: pointer;
+}
+
+.legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 16px;
+  margin-top: 14px;
+}
+
+.legendItem {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  color: var(--color-text-muted);
+}
+
+.legendSwatch {
+  width: 14px;
+  height: 3px;
+  border-radius: 2px;
+}
+
+.legendSwatch[data-kind='primary'] {
+  background: var(--color-accent);
+}
+
+.legendSwatch[data-kind='corridor'] {
+  height: 0;
+  border-top: 2px dashed var(--color-brzycki);
+  border-radius: 0;
+}
+
+.legendSwatch[data-kind='record'] {
+  width: 9px;
+  height: 9px;
+  border: 1.5px solid color-mix(in srgb, var(--color-accent) 60%, transparent);
+  border-radius: 50%;
+  background: none;
+}
+
+.empty {
+  display: grid;
+  place-items: center;
+  min-height: 180px;
+  padding: 24px;
+  border: 1px dashed var(--color-line);
+  border-radius: var(--radius);
+  color: var(--color-text-muted);
+  font-size: 0.875rem;
+  text-align: center;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .dot {
+    transition-duration: 0.01ms;
+  }
+}

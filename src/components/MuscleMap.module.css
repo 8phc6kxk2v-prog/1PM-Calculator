@@ -1,0 +1,76 @@
+.wrap {
+  display: grid;
+  gap: 12px;
+}
+
+.switch {
+  justify-self: center;
+  width: 100%;
+  max-width: 240px;
+}
+
+.stage {
+  display: grid;
+  place-items: center;
+}
+
+/* Карта с легендой и панелью должна помещаться в экран без прокрутки */
+.svg {
+  width: 100%;
+  max-width: 250px;
+  height: auto;
+  max-height: 34dvh;
+}
+
+.wrap[data-compact='true'] .svg {
+  max-width: 118px;
+  max-height: 210px;
+}
+
+/* Не --color-surface: на карточке того же цвета тело становится невидимым */
+.outline {
+  fill: var(--color-surface-hi);
+}
+
+/*
+ * Ненагруженная мышца - приглушённый контур, а не пустое место:
+ * иначе непонятно, есть группа на карте вообще или её забыли нарисовать.
+ */
+.muscle {
+  stroke: var(--color-bg);
+  stroke-width: 0.8;
+}
+
+.muscle[data-interactive='true'] {
+  cursor: pointer;
+  transition: filter 160ms var(--ease-out);
+}
+
+.muscle[data-selected='true'] {
+  stroke: var(--color-text);
+  stroke-width: 1.6;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .muscle[data-interactive='true']:hover {
+    filter: brightness(1.25);
+  }
+}
+
+/* Каскад сверху вниз, один раз при монтировании */
+@media (prefers-reduced-motion: no-preference) {
+  .muscle {
+    animation: appear 240ms var(--ease-out) backwards;
+  }
+}
+
+@keyframes appear {
+  from {
+    opacity: 0;
+    transform: translateY(-4px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
