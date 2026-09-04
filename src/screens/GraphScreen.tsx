@@ -1,4 +1,4 @@
-import { ArrowUpRight, DownloadSimple, TrashSimple, UploadSimple } from '@phosphor-icons/react'
+﻿import { ArrowUpRight, DownloadSimple, TrashSimple, UploadSimple } from '@phosphor-icons/react'
 import { useRef, useState, type ChangeEvent } from 'react'
 import CurveChart from '../components/charts/CurveChart'
 import ProgressChart from '../components/charts/ProgressChart'
@@ -12,7 +12,6 @@ import {
   exportHistoryJSON,
   getAllExercises,
   getHistory,
-  getMuscleBindings,
   getProfile,
   importHistoryJSON,
 } from '../lib/storage'
@@ -127,7 +126,7 @@ export default function GraphScreen({ onOpenProfile }: { onOpenProfile: () => vo
             <h2>Мышцы за неделю</h2>
             <span className={styles.count}>свежее весит больше</span>
           </div>
-          <WeeklyLoad history={history} profile={profile} bindings={getMuscleBindings()} />
+          <WeeklyLoad history={history} profile={profile} />
 
           <div className={styles.sectionTitle}>
             <h2>Регулярность</h2>

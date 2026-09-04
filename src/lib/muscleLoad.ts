@@ -1,4 +1,4 @@
-import {
+﻿import {
   MUSCLE_GROUPS,
   MUSCLE_LABELS,
   resolveExercise,
@@ -49,7 +49,6 @@ export interface MuscleLoads {
 
 export interface LoadOptions {
   bodyweightKg?: number
-  bindings?: Record<string, string>
 }
 
 /** Вес, который реально двигали: свой вес по коэффициенту плюс дополнительный */
@@ -124,7 +123,7 @@ export function computeMuscleLoads(
 
   const resolved: { set: LoadSet; exercise: Exercise; weight: number; time: number }[] = []
   for (const set of sets) {
-    const exercise = resolveExercise(set.exercise, options.bindings)
+    const exercise = resolveExercise(set.exercise)
     if (!exercise) {
       unmatchedCounts.set(set.exercise, (unmatchedCounts.get(set.exercise) ?? 0) + 1)
       continue
@@ -232,7 +231,7 @@ export function muscleInsight(
   let pull = 0
 
   for (const set of sets) {
-    const exercise = resolveExercise(set.exercise, options.bindings)
+    const exercise = resolveExercise(set.exercise)
     if (!exercise) continue
     const daysAgo = daysBetween(new Date(set.date).getTime(), at)
     if (daysAgo < 0 || daysAgo > 28) continue

@@ -29,7 +29,6 @@ const KEYS = {
   profile: 'gymapp.profile',
   history: 'gymapp.history',
   customExercises: 'gymapp.customExercises',
-  muscleBindings: 'gymapp.muscleBindings',
 } as const
 
 export const EXERCISE_GROUPS: ReadonlyArray<{ group: string; items: string[] }> = [
@@ -136,17 +135,6 @@ export function addCustomExercise(name: string): void {
 
 export function getAllExercises(): string[] {
   return [...PRESET_EXERCISES, ...getCustomExercises()]
-}
-
-/* Привязки упражнений к справочнику мышц: нормализованное имя -> id упражнения */
-
-export function getMuscleBindings(): Record<string, string> {
-  const bindings = read<Record<string, string>>(KEYS.muscleBindings, {})
-  return typeof bindings === 'object' && bindings !== null ? bindings : {}
-}
-
-export function setMuscleBinding(normalizedName: string, exerciseId: string): void {
-  write(KEYS.muscleBindings, { ...getMuscleBindings(), [normalizedName]: exerciseId })
 }
 
 /* Экспорт / импорт */

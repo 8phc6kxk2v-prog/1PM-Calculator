@@ -1,5 +1,5 @@
-import { describe, expect, it } from 'vitest'
-import { bestEntry, liftBalance, streakStats } from './insights'
+﻿import { describe, expect, it } from 'vitest'
+import { liftBalance, streakStats } from './insights'
 import type { HistoryEntry } from './storage'
 
 const entry = (over: Partial<HistoryEntry>): HistoryEntry => ({
@@ -96,13 +96,3 @@ describe('баланс троеборья', () => {
   })
 })
 
-describe('лучший замер', () => {
-  it('выбирает запись с максимальным расчётным 1ПМ', () => {
-    const best = bestEntry([entry({}), entry({ brzycki1RM: 140, epley1RM: 145 })])
-    expect(best?.brzycki1RM).toBe(140)
-  })
-
-  it('пустая история даёт null', () => {
-    expect(bestEntry([])).toBeNull()
-  })
-})

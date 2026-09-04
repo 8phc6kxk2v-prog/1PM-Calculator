@@ -1,4 +1,4 @@
-import { estimate1RM, personalRecords } from './records'
+﻿import { personalRecords } from './records'
 import type { HistoryEntry } from './storage'
 
 const DAY_MS = 24 * 60 * 60 * 1000
@@ -123,8 +123,3 @@ export function liftBalance(history: HistoryEntry[]): Balance {
   return { lifts, weakest: weakest.deviation < -5 ? weakest : null, missing }
 }
 
-/** Лучший расчётный максимум за всю историю по упражнению, для метки на графике */
-export function bestEntry(entries: HistoryEntry[]): HistoryEntry | null {
-  if (entries.length === 0) return null
-  return entries.reduce((best, entry) => (estimate1RM(entry) > estimate1RM(best) ? entry : best))
-}

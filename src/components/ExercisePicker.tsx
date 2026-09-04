@@ -11,10 +11,6 @@ interface ExercisePickerProps {
   onPick: (exercise: string) => void
   /** Открыть ввод своего названия */
   onAddCustom: () => void
-  /** Свой список групп: экран мышц подставляет справочник биомеханики */
-  groups?: ReadonlyArray<{ group: string; items: string[] }>
-  allowCustom?: boolean
-  title?: string
 }
 
 export default function ExercisePicker({
@@ -24,9 +20,6 @@ export default function ExercisePicker({
   onClose,
   onPick,
   onAddCustom,
-  groups: groupsProp,
-  allowCustom = true,
-  title = 'Упражнение',
 }: ExercisePickerProps) {
   const dialog = useRef<HTMLDialogElement>(null)
   const [query, setQuery] = useState('')
@@ -41,10 +34,7 @@ export default function ExercisePicker({
     if (!open && element.open) element.close()
   }, [open])
 
-  const groups = groupsProp ?? [
-    ...EXERCISE_GROUPS,
-    ...(custom.length > 0 ? [{ group: 'Свои', items: custom }] : []),
-  ]
+  const groups = [...EXERCISE_GROUPS, ...(custom.length > 0 ? [{ group: 'Свои', items: custom }] : [])]
   const needle = query.trim().toLowerCase()
   const filtered = groups
     .map(({ group, items }) => ({
@@ -60,7 +50,7 @@ export default function ExercisePicker({
 
         <div className={styles.head}>
           <div className={styles.titleRow}>
-            <span className={styles.title}>{title}</span>
+            <span className={styles.title}>Упражнение</span>
             <button type="button" className={styles.close} aria-label="Закрыть" onClick={onClose}>
               <X size={18} weight="bold" />
             </button>
@@ -100,12 +90,10 @@ export default function ExercisePicker({
             ))
           )}
 
-          {allowCustom && (
-            <button type="button" className={styles.custom} onClick={onAddCustom}>
-              <Plus size={16} weight="bold" />
-              Добавить своё упражнение
-            </button>
-          )}
+          <button type="button" className={styles.custom} onClick={onAddCustom}>
+            <Plus size={16} weight="bold" />
+            Добавить своё упражнение
+          </button>
         </div>
       </div>
     </dialog>

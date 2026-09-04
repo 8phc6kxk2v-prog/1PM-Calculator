@@ -624,7 +624,7 @@ export function normalize(name: string): string {
 }
 
 /** Расстояние Левенштейна, две строки коротких названий - считать дёшево */
-export function levenshtein(a: string, b: string): number {
+function levenshtein(a: string, b: string): number {
   if (a === b) return 0
   if (a.length === 0) return b.length
   if (b.length === 0) return a.length
@@ -652,21 +652,13 @@ for (const exercise of EXERCISES) {
   for (const alias of exercise.aliases) INDEX.set(normalize(alias), exercise)
 }
 
-export function exerciseById(id: string): Exercise | null {
-  return EXERCISES.find((exercise) => exercise.id === id) ?? null
-}
-
 /**
- * Ручные привязки имеют приоритет над автоматикой: человек знает лучше.
  * Опечатки ловим Левенштейном с порогом в четверть длины, но не больше трёх
  * правок - иначе короткие названия начинают склеиваться между собой.
  */
-export function resolveExercise(name: string, bindings: Record<string, string> = {}): Exercise | null {
+export function resolveExercise(name: string): Exercise | null {
   const key = normalize(name)
   if (!key) return null
-
-  const bound = bindings[key]
-  if (bound) return exerciseById(bound)
 
   const exact = INDEX.get(key)
   if (exact) return exact

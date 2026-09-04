@@ -1,6 +1,7 @@
-import { useMemo, useState } from 'react'
+﻿import { useMemo, useState } from 'react'
 import { MUSCLE_LABELS, type MuscleGroup } from '../data/muscleMap'
 import { computeMuscleLoads, muscleInsight, type LoadSet } from '../lib/muscleLoad'
+import { plural } from '../lib/plural'
 import type { HistoryEntry, Profile } from '../lib/storage'
 import MuscleMap, { fillFor } from './MuscleMap'
 import styles from './WeeklyLoad.module.css'
@@ -12,22 +13,13 @@ const LEGEND: { label: string; intensity: number }[] = [
   { label: 'высокая', intensity: 1 },
 ]
 
-function plural(value: number, one: string, few: string, many: string): string {
-  const mod10 = value % 10
-  const mod100 = value % 100
-  if (mod10 === 1 && mod100 !== 11) return one
-  if (mod10 >= 2 && mod10 <= 4 && (mod100 < 12 || mod100 > 14)) return few
-  return many
-}
-
 interface WeeklyLoadProps {
   history: HistoryEntry[]
   profile: Profile | null
-  bindings: Record<string, string>
 }
 
 /** Нагрузка по мышцам за последние 7 дней: силуэт, панель разбора, инсайт */
-export default function WeeklyLoad({ history, profile, bindings }: WeeklyLoadProps) {
+export default function WeeklyLoad({ history, profile }: WeeklyLoadProps) {
   const [selected, setSelected] = useState<MuscleGroup | null>(null)
 
   const sets: LoadSet[] = useMemo(
@@ -41,11 +33,11 @@ export default function WeeklyLoad({ history, profile, bindings }: WeeklyLoadPro
     [history],
   )
 
-  const options = { bodyweightKg: profile?.weightKg ?? 0, bindings }
+  const options = { bodyweightKg: profile?.weightKg ?? 0 }
   const loads = useMemo(
     () => computeMuscleLoads(sets, new Date(), 7, options),
     // eslint-disable-next-line react-hooks/exhaustive-deps
-    [sets, bindings, profile?.weightKg],
+    [sets, profile?.weightKg],
   )
   const insight = muscleInsight(loads, sets, new Date(), options)
 

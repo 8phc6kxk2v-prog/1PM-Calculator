@@ -64,9 +64,6 @@ describe('матчинг названий', () => {
     expect(resolveExercise('')).toBeNull()
   })
 
-  it('ручная привязка имеет приоритет', () => {
-    expect(resolveExercise('моя тяга', { 'моя тяга': 'deadlift' })?.id).toBe('deadlift')
-  })
 })
 
 describe('computeMuscleLoads', () => {
@@ -153,15 +150,6 @@ describe('computeMuscleLoads', () => {
     )
     expect(loads.unmatched).toEqual([{ name: 'Прыжки на скакалке', sets: 2 }])
     expect(loads.groups.chest.volume).toBeGreaterThan(0)
-  })
-
-  it('ручная привязка втягивает запись в расчёт', () => {
-    const raw = [set({ exercise: 'Мой комплекс', weight: 60, reps: 10 })]
-    expect(computeMuscleLoads(raw, NOW).unmatched).toHaveLength(1)
-
-    const bound = computeMuscleLoads(raw, NOW, 7, { bindings: { 'мой комплекс': 'kettlebell-swing' } })
-    expect(bound.unmatched).toEqual([])
-    expect(bound.groups.glutes.volume).toBeGreaterThan(0)
   })
 
   it('вклад упражнений в группу перечисляется по убыванию', () => {

@@ -1,14 +1,7 @@
-import { BALANCE_REFERENCE, dayKey, liftBalance, streakStats } from '../lib/insights'
+﻿import { BALANCE_REFERENCE, dayKey, liftBalance, streakStats } from '../lib/insights'
+import { plural } from '../lib/plural'
 import type { HistoryEntry } from '../lib/storage'
 import styles from './InsightCards.module.css'
-
-function plural(count: number, one: string, few: string, many: string): string {
-  const mod10 = count % 10
-  const mod100 = count % 100
-  if (mod10 === 1 && mod100 !== 11) return one
-  if (mod10 >= 2 && mod10 <= 4 && (mod100 < 12 || mod100 > 14)) return few
-  return many
-}
 
 export function StreakCard({ history }: { history: HistoryEntry[] }) {
   const stats = streakStats(history)
