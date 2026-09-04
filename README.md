@@ -1,3 +1,25 @@
+<div align="center">
+
+<img src="docs/banner.svg" alt="1PM Calculator" width="820">
+
+**Offline-first PWA for strength training.** Estimates your one-rep max with the Epley and Brzycki
+formulas, maps which muscles each lift works, and tracks history with charts, personal records,
+weekly muscle load and a DOTS score. Breathing drills included. No backend, no account —
+data stays in your browser.
+
+[![Deploy](https://github.com/8phc6kxk2v-prog/1PM-Calculator/actions/workflows/deploy.yml/badge.svg)](https://github.com/8phc6kxk2v-prog/1PM-Calculator/actions/workflows/deploy.yml)
+![React](https://img.shields.io/badge/React-19-b4e635?style=flat-square&labelColor=1c1c20)
+![TypeScript](https://img.shields.io/badge/TypeScript-строгий-b4e635?style=flat-square&labelColor=1c1c20)
+![Vite](https://img.shields.io/badge/Vite-8-b4e635?style=flat-square&labelColor=1c1c20)
+![PWA](https://img.shields.io/badge/PWA-офлайн-b4e635?style=flat-square&labelColor=1c1c20)
+![Тесты](https://img.shields.io/badge/тесты-114-b4e635?style=flat-square&labelColor=1c1c20)
+
+[Открыть приложение](https://8phc6kxk2v-prog.github.io/1PM-Calculator/)
+
+</div>
+
+---
+
 # 1ПМ Калькулятор
 
 PWA для расчёта одноповторного максимума по формулам Эпли и Брзицки. История тренировок и графики. Без бэкенда, всё хранится в localStorage браузера.

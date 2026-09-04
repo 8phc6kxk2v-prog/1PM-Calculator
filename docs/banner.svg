@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 340" width="1200" height="340" role="img" aria-label="1PM Calculator">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#16181c" />
+      <stop offset="55%" stop-color="#121316" />
+      <stop offset="100%" stop-color="#0e0f12" />
+    </linearGradient>
+    <linearGradient id="lime" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#c9f45a" />
+      <stop offset="100%" stop-color="#a5d92b" />
+    </linearGradient>
+    <radialGradient id="glow" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0%" stop-color="#b4e635" stop-opacity="0.18" />
+      <stop offset="100%" stop-color="#b4e635" stop-opacity="0" />
+    </radialGradient>
+  </defs>
+
+  <rect width="1200" height="340" rx="20" fill="url(#bg)" />
+  <ellipse cx="600" cy="150" rx="520" ry="200" fill="url(#glow)" />
+
+  <!-- Штанга: тот же знак, что и на иконке приложения -->
+  <g fill="url(#lime)" transform="translate(600 96) scale(0.62) translate(-256 -256)">
+    <rect x="140" y="236" width="232" height="40" rx="10" />
+    <rect x="152" y="176" width="52" height="160" rx="14" />
+    <rect x="308" y="176" width="52" height="160" rx="14" />
+    <rect x="106" y="206" width="30" height="100" rx="10" />
+    <rect x="376" y="206" width="30" height="100" rx="10" />
+  </g>
+
+  <text x="600" y="228" text-anchor="middle"
+        font-family="'Arial Black', 'Segoe UI Black', Impact, 'Helvetica Neue', sans-serif"
+        font-size="96" font-weight="900" letter-spacing="-3" fill="url(#lime)">1PM CALCULATOR</text>
+
+  <text x="600" y="272" text-anchor="middle"
+        font-family="'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif"
+        font-size="23" font-weight="600" letter-spacing="6.5" fill="#8a8a90">EPLEY · BRZYCKI · OFFLINE PWA</text>
+
+  <g fill="#f0399b">
+    <rect x="404" y="296" width="120" height="5" rx="2.5" />
+  </g>
+  <g fill="#b4e635">
+    <rect x="536" y="296" width="260" height="5" rx="2.5" />
+  </g>
+</svg>
